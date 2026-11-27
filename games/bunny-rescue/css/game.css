@@ -1,0 +1,20 @@
+:root{--pink:#F5A9C8;--soft:#FFDCE9;--mint:#C4F5E9;--teal:#64C4B0;--cream:#FFF2D8;--yellow:#FFF19B;--ink:#493D48}
+*{box-sizing:border-box}[hidden]{display:none!important}
+html,body{margin:0;height:100%;overflow:hidden;overscroll-behavior:none}
+body{background:var(--mint);color:var(--ink);font:500 16px/1.45 'Pixelify Sans',ui-monospace,monospace;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.app{display:flex;flex-direction:column;height:100vh;height:100dvh;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+.hud{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 14px;padding:8px;background:var(--soft);border-bottom:4px solid var(--ink)}
+.hud button{min-height:36px;padding:4px 10px;font-size:14px;box-shadow:0 3px 0 var(--ink)}
+.bar{position:relative;width:min(520px,100%);height:20px;background:#fff;border:3px solid var(--ink)}
+.bar i{position:absolute;inset:0 auto 0 0;width:0;background:var(--teal)}.bar em{position:absolute;inset:0;font:700 12px/14px inherit;text-align:center;font-style:normal;font-size:12px}
+.stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.stage canvas{image-rendering:pixelated;touch-action:none;display:block}
+button,.button{min-height:48px;padding:10px 22px;border:3px solid var(--ink);background:var(--pink);color:var(--ink);font:700 17px 'Pixelify Sans',ui-monospace,monospace;box-shadow:0 5px 0 var(--ink);cursor:pointer;text-decoration:none;display:inline-block}
+button:disabled{opacity:.5;cursor:default}.alt{background:#fff}
+.screen{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:safe center;gap:12px;padding:20px;text-align:center;overflow:auto;background:#fff2d8ee}
+.screen h1,.screen h2{margin:0;font-size:clamp(26px,7vw,48px);text-shadow:3px 3px 0 var(--pink)}.screen p{max-width:420px;margin:0}
+.mascot{width:min(192px,26vh);height:auto;image-rendering:pixelated}
+.logo{width:min(420px,86vw);height:auto;image-rendering:pixelated}
+.screen h1{text-shadow:none}
+.icon{width:24px;height:auto;vertical-align:-7px;margin-right:6px;image-rendering:pixelated}
+.logo.win{width:min(300px,76vw)}

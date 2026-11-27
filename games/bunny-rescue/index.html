@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Tica's Bunny Rescue</title>
+<link rel="icon" href="../../assets/decorations/heart.svg">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&display=swap">
+<link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+<div class="app">
+  <header class="hud">
+    <span><img class="icon" src="assets/ui/clock.png" alt="">TIME: <b id="time">45</b></span><span>SCORE: <b id="score">0/10</b></span><span>IN HAND: <b id="hand">0</b></span>
+    <button type="button" id="pause" disabled>Pause</button><button type="button" class="sound">Sound: on</button>
+    <div class="bar"><i id="fill"></i><em>RESCUE PROGRESS: <span id="progress">0/10</span></em></div>
+  </header>
+  <div class="stage"><canvas aria-label="Taman kelinci"></canvas></div>
+
+  <section class="screen" id="start">
+    <h1><img class="logo" src="assets/ui/game-logo.png" alt="Tica's Bunny Rescue"></h1>
+    <canvas class="mascot" width="192" height="192" aria-hidden="true"></canvas>
+    <p>Tahan seekor kelinci, geser ke kandang pink, lalu lepaskan. Selamatkan 10 kelinci dalam 45 detik. Kelinci di dalam lubang tidak bisa ditangkap.</p>
+    <button type="button" id="play" disabled>Loading...</button>
+    <button type="button" class="back alt">Back to Birthday</button>
+  </section>
+  <section class="screen" id="paused" hidden>
+    <h2>Paused</h2>
+    <button type="button" id="resume">Resume</button><button type="button" class="restart alt">Restart</button>
+    <button type="button" class="sound alt">Sound: on</button><button type="button" class="back alt">Back to Birthday</button>
+  </section>
+  <section class="screen" id="victory" hidden>
+    <h2><img class="logo win" src="assets/ui/win-panel.png" alt="YOU DID IT, SAYANG!"></h2>
+    <canvas class="mascot" width="192" height="192" aria-hidden="true"></canvas>
+    <p><b>10 / 10 BUNNIES RESCUED</b></p>
+    <p>You saved all the little bunnies! You did amazing. Happy 20th Birthday, Tisya! ♡</p>
+    <a class="button" href="../../pages/final-surprise.html">Open Final Surprise</a>
+    <button type="button" class="restart alt">Play Again</button><button type="button" class="back alt">Back to Birthday</button>
+  </section>
+  <section class="screen" id="gameover" hidden>
+    <h2>Time's up!</h2>
+    <p><b><span id="final-score">0</span> / 10 BUNNIES RESCUED</b></p>
+    <button type="button" class="restart">Retry</button><button type="button" class="back alt">Back to Birthday</button>
+  </section>
+</div>
+<script defer src="js/game.bundle.js"></script>
+</body>
+</html>

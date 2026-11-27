@@ -1,0 +1,8 @@
+.paper{position:relative;margin-top:24px;padding:44px clamp(20px,6vw,56px);background:#fffdf7 repeating-linear-gradient(transparent 0 31px,#64c4b030 31px 32px);box-shadow:0 12px 32px #493d4833;border-radius:6px}
+.paper p{margin:0 0 32px;font-size:17px;line-height:32px}
+.paper p.hand{font-size:28px;line-height:32px}
+.tape{position:absolute;top:-14px;left:36%;width:28%;height:28px;background:#f5a9c8bb;rotate:-2deg}
+.reasons{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;align-items:start}
+.reasons details{background:#fff;border:2px solid var(--pink);border-radius:14px;padding:10px 14px}
+.reasons summary{font:600 15px var(--display);cursor:pointer;min-height:30px}.reasons p{margin:6px 0;font:23px/1.25 var(--hand)}
+@media(max-width:520px){.reasons{grid-template-columns:1fr}}
